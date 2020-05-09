@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+    <properties resource="springMVC.properties"></properties>
+
+    <settings>
+        <!--查询集合字段为空时，key仍然存在-->
+        <setting name="callSettersOnNulls" value="true"/>
+    </settings>
+    <!-- 别名 -->
+    <typeAliases>
+        <!-- 设置HashMap的别名 -->
+        <typeAlias type="java.util.HashMap" alias="map"/>
+    </typeAliases>
+
+
+    <mappers>
+        <mapper url="classpath:mapper/*.xml"/>
+    </mappers>
+</configuration>

@@ -26,6 +26,8 @@
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <!-- 指定数据源 -->
         <property name="dataSource" ref="jdbcDataSource"/>
+        <!-- mybatis配置文件进行额外配置 -->
+        <property name="configLocation" value="classpath:mybatis-config.xml"/>
         <!--指定sql映射xml文件的路径 -->
         <property name="mapperLocations" value="classpath:mapper/*.xml"></property>
     </bean>
@@ -58,4 +60,6 @@
     <context:component-scan base-package="com">
         <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
     </context:component-scan>
+
+
 </beans>

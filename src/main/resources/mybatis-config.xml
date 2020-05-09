@@ -13,11 +13,7 @@
     <!-- 别名 -->
     <typeAliases>
         <!-- 设置HashMap的别名 -->
-        <typeAlias type="java.util.HashMap" alias="map"/>
+        <typeAlias type="java.util.HashMap" alias="hashmap"/>
     </typeAliases>
 
-
-    <mappers>
-        <mapper url="classpath:mapper/*.xml"/>
-    </mappers>
 </configuration>
